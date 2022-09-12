@@ -101,7 +101,7 @@ jobs:
           key: ${{ runner.os }}-sbt-cache-v2-${{ hashFiles('**/*.sbt') }}-${{ hashFiles('project/build.properties') }}
 
       - name: Download target directories (2.12.12)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: target-${{ matrix.os }}-2.12.12-${{ matrix.java }}
 
@@ -111,7 +111,7 @@ jobs:
           rm targets.tar
 
       - name: Download target directories (2.13.4)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: target-${{ matrix.os }}-2.13.4-${{ matrix.java }}
 
